@@ -1,0 +1,35 @@
+
+body {
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #111827;
+}
+
+.container {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #374151;
+    color: white;
+    border: none;
+}
+
+.result {
+    margin-top: 20px;
+}
