@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Analytics</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Student Analytics</h1>
+    <p class="subtitle">Academic workload and recovery assessment</p>
+
+    <form method="POST">
+        <input name="study_hours" placeholder="Study hours" required>
+        <input name="sleep_hours" placeholder="Sleep hours" required>
+        <input name="screen_time" placeholder="Screen time" required>
+        <input name="stress_level" placeholder="Stress (1-10)" required>
+        <input name="backlog_size" placeholder="Backlog size" required>
+        <input name="topic_clarity" placeholder="Topic clarity (1-10)" required>
+        <input name="planning_confidence" placeholder="Planning confidence (1-10)" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>Risk: {{ result }}</h2>
+            <p>{{ explanation }}</p>
+            <ul>
+                {% for step in plan %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>
